@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[workspace.dependencies]
+clap = { version = "4.5.44", features = ["env", "derive"] }
+git-version = "0.3.9"
+poem = "3.1.12"
+reqwest = { version = "0.12.23", features = ["rustls-tls"], default-features = false }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_yaml = "0.9.34"
+thiserror = "2.0.14"
+tokio = { version = "1.47.1", features = ["rt-multi-thread", "macros", "process"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
