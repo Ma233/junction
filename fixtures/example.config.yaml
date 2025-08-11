@@ -1,0 +1,23 @@
+outputs:
+  - slug: "example-system-info"
+    cmd: "uname"
+    args:
+      - "-a"
+
+  - slug: "example-date"
+    cmd: "date"
+    args:
+      - "+%Y-%m-%d %H:%M:%S"
+
+  - slug: "example-hello"
+    cmd: "echo"
+    args:
+      - "Hello from Junction!"
+
+  - slug: "example-junction-merger"
+    cmd: "junction-merger"
+    args:
+      - "--type"
+      - "plaintext"
+      - "http://127.0.0.1:7749/config"
+      - "./config.yaml"

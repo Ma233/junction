@@ -1,0 +1,10 @@
+services:
+  junction-server:
+    image: ghcr.io/ma233/junction:main
+    restart: always
+    environment:
+      RUST_LOG: debug
+    ports:
+      - "0.0.0.0:7749:7749"
+    volumes:
+      - ./data:/opt/junction/data
